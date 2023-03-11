@@ -1,0 +1,12 @@
+# 65. Write a python program that converts seconds into days, hours, minutes, and seconds
+
+time = float(input("Input time in seconds: "))
+day = time // (24 * 3600)
+time = time % (24 * 3600)
+hour = time // 3600
+time %= 3600
+minutes = time // 60
+time %= 60
+seconds = time
+
+print("d:h:m:s -> {}:{}:{}:{}".format(int(day),int(hour),int(minutes),int(seconds)))
