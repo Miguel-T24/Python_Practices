@@ -11,5 +11,3 @@ print("\n")
 
 print("{:.6}".format(string))
 print("{}".format(string[0:6]))
-
-
