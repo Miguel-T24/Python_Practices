@@ -3,7 +3,7 @@
 set1 = {1,2,3}
 
 set1.pop()
-print(set1)
+print(set1) # 2 , 3
 
 # remove all element
 
