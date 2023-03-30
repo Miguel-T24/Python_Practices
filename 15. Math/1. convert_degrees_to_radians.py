@@ -2,7 +2,11 @@
 
 import math
 
-degree = int(input("Enter Dregees: "))
+degree = int(input("Enter Degrees: "))
 radians = degree*(math.pi/180)
 
 print("Degrees : {} in Radians : {:.2f}".format(degree,radians))
+
+# Other Way
+print("Degrees: {} in radians: {}".format(degree,math.radians(degree)))
+
