@@ -13,7 +13,7 @@
 
 """
 
-print("1. nametuple")
+print("nametuple")
 print("Standard tuple:")
 bob = "Bob",30,"Male"
 jane = "Jane",29,"Female"
