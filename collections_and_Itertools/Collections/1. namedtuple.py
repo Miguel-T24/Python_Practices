@@ -7,9 +7,6 @@
 - Counter: dict subclass for counting hashable objects
 - orderedDict: dict subclass that remembers the order entries were added.  
 - defaultDict: dict subclass that calls a factory function to supply missing values
-- Userdict: wrapper around dictionary objects for easier dict subclassing
-- UserList: wrapper around list object for easier list subclassing.
-- UserString: wrapper around string objects for easier string subclassing
 
 """
 
