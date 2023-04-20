@@ -94,3 +94,46 @@ values = [(0, 5), (1, 6), (2, 7), (3, 8), (4, 9)]
 
 for i in itertools.starmap(lambda x, y: (x, y, x * y), values):
     print('{} * {} = {}'.format(*i))
+
+print("\n6. Producing new values: ")
+
+for i in zip(itertools.count(1), ['a','b','c']):
+    print(i)
+
+print("count(start,step)")
+import fractions
+
+start = fractions.Fraction(1,3)
+step = fractions.Fraction(1,3)
+
+for i in zip(itertools.count(start,step), ['a','b','c']):
+    print("{}: {}".format(*i))
+
+
+print("Cycle")
+for i in zip(range(7), itertools.cycle(['a','b','c'])):
+    print(i)
+print("\nRepeat: Normal")
+for i in range(5):
+    print("Over-and-Over")
+print("Repeat: function Repeat")
+for i in itertools.repeat('Over-and-Over',5):
+    print(i)
+
+print("\nCombining repeat zip and map")
+for i,s in zip(itertools.count(),itertools.repeat('over-and-over',5)):
+    print(i,s)
+
+print("using map to multiply two numbers in range 0 - 4")
+for i in map(lambda x, y: (x,y, x*y), itertools.repeat(2), range(5)):
+    print("{} : {} = {}".format(*i))
+
+print("\n7. Filtering")
+print("dropwhile function")
+
+def should_drop(x):
+    print("Testing:",x)
+    return x < 1
+
+for i in itertools.dropwhile(should_drop,[-1,0,1,2,-2]):
+    print("Yielding:",i)
