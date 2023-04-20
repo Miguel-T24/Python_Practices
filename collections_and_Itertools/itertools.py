@@ -137,3 +137,26 @@ def should_drop(x):
 
 for i in itertools.dropwhile(should_drop,[-1,0,1,2,-2]):
     print("Yielding:",i)
+
+print("\nusing Filter()")
+def check_item(x):
+    print("Testing:",x)
+    return x<1
+
+for i in filter(check_item, [-1,0,1,2,-2]):
+    print("Yielding:",i)
+    
+print("\nFilterfalse()")
+def check_item(x):
+    print("Testing:",x)
+    return x<1
+for i in itertools.filterfalse(check_item, [-1,0,1,2-2]):
+    print("Yirlding:",i)
+
+print("\nCompress()")
+every_thrid = itertools.cycle([False,False,True])
+data = range(1,10)
+
+for i in itertools.compress(data,every_thrid):
+    print(i,end=" ")
+print()
