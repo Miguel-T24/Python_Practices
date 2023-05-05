@@ -1,28 +1,17 @@
 # 79. Write a python program to find the samllest and largest words in a given string
 
-def smallest_largest_words(str1):
-    word = "";
-    all_words = [];
-    str1 = str1 + " ";
-    for i in range(0, len(str1)):
-        if(str1[i] != ' '):
-            word = word + str1[i];  
-        else:
-            all_words.append(word);  
-            word = "";  
-          
-    small = large = all_words[0];  
-   
-#Find smallest and largest word in the str1  
-    for k in range(0, len(all_words)):
-        if(len(small) > len(all_words[k])):
-            small = all_words[k];
-        if(len(large) < len(all_words[k])):
-            large = all_words[k];
-    return small,large;
+def smallest_largest_words(string):
+    string = string.split(" ")
+    smallest = string[0]
+    largest = ""
+    for i in string:
+        smallest = (smallest,i)[len(i)<len(smallest)]
+        largest = (largest,i)[len(i)>len(largest)]
 
-str1 = "Write a Java program to sort an array of given integers using Quick sort Algorithm.";  
-print("Original Strings:\n",str1)
-small, large = smallest_largest_words(str1)  
-print("Smallest word: " + small);  
-print("Largest word: " + large); 
+    return (smallest,largest)
+
+string = "Write a Java program to sort an array of given integers using Quick sort Algorithm."
+small, large = smallest_largest_words(string)
+
+print("Original Word: {}".format(string))
+print("Smallest Word: {}\nLargest Word: {}".format(small, large))
