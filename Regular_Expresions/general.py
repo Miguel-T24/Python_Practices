@@ -104,7 +104,6 @@ Flags o banderas
 
 - MULTILINE, M : Coincidencia de varias lineas, que afecta a ^ y $
 
-- VERBOSE, X(for "extended") : Habilite RE detallados, que s epueden organizar de manera mas limpia y comprensible
+- VERBOSE, X(for "extended") : Habilite RE detallados, que se pueden organizar de manera mas limpia y comprensible
 
 """
-
