@@ -4,19 +4,19 @@ print("Deque")
 import collections
 
 d = collections.deque('abcdefg')
-print("Deque: {}".format(d))
-print("Length: {}".format(len(d)))
-print("left end: {}".format(d[0]))
-print("right end: {}".format(d[-1]))
+print("Deque: {}".format(d)) # ['a','b','c','d','e','f','g']
+print("Length: {}".format(len(d))) # 7
+print("left end: {}".format(d[0])) # a
+print("right end: {}".format(d[-1])) # g
 
 d.remove('c')
-print("Deque remove(c): {}".format(d))
+print("\nDeque remove(c): {}".format(d)) # deque(['a','b','d','e','f','g'])
 
 print("\nExtend and append")
 # Add to right
 d1 = collections.deque()
 d1.extend('abcdefg')
-print("Extend Left: {}".format(d1))
+print("Extend: {}".format(d1)) 
 d1.append("h")
 print("Append: {}".format(d1))
 
@@ -25,7 +25,7 @@ d2 = collections.deque()
 d2.extendleft(range(6))
 print("Extend left: {}".format(d2))
 d2.appendleft(6)
-print("extendleft: {}".format(d2))
+print("append left: {}".format(d2))
 
 print("\nPop para eliminar el extremo derecho y popleft el extremo izquierdo")
 d3 = collections.deque()
