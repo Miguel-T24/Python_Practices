@@ -6,8 +6,8 @@ a = {'a': 'A', 'c': 'C'}
 b = {'b': 'B', 'c': 'D'}
 
 ab = collections.ChainMap(a,b)
-print(ab)
-print(type(ab))
+print(ab) # ChainMap({'a':'A', 'c':'C'},{'b':'B','c':'D'})
+print(type(ab)) # <class 'collections.Chainmap'>
 
 # individual values
 print("\nIndividual Values:")
@@ -16,10 +16,11 @@ print("'b' : {}".format(ab['b'])) # B
 print("'c' : {}".format(ab['c'])) # C
 
 print("keys Values:")
-print("keys: {}".format(list(ab.keys())))
-print("values: {}".format(list(ab.values())))
+print("keys: {}".format(list(ab.keys()))) # ['b','c','a']
+print("values: {}".format(list(ab.values()))) # ['B','C','A']
 
-print('d' in ab)
+print()
+print('d' in ab) # False
 
 # Sorting out
 print("\nsorting out")
@@ -28,17 +29,15 @@ b = {'b': 'B', 'c': 'D'}
 
 ab = collections.ChainMap(a,b)
 
-print(ab)
+print(ab) # ChainMap({'a':'A', 'c':'C'},{'b':'B','c':'D'})
 
 print("Print C")
 print("'c' : {}".format(ab['c'])) # C
 print("But if a sort chainmap")
 ab.maps = list(reversed(ab.maps))
+print("Now ab is: {}".format(ab)) # ChainMap({'a':'A', 'c':'C'},{'b':'B','c':'D'})
 print("Print c")
 print("'c' : {}".format(ab['c'])) # D
-
-print(ab)
-
 
 # Update Values
 print("\nUpdate Values")
@@ -49,22 +48,23 @@ ab = collections.ChainMap(a,b)
 
 print("Before: {}".format(ab['c']))
 a['c'] = 'E'
-print("After: {}".format(ab['c']))
-print("a: {}".format(a))
+print("After: {}".format(ab['c'])) # E
+print("a: {}".format(a)) # {'a':'A','c':'E'}
 
 # change value with chainmap
 a = {'a': 'A', 'c': 'C'}
 b = {'b': 'B', 'c': 'D'}
 
 ab = collections.ChainMap(a,b)
-print("Before: {}".format(ab))
+print("\nBefore: {}".format(ab))
 ab['c'] = "E"
 print("After: {}".format(ab))
 
 print("a: {}".format(a))
 
 #If we want avoid change values of original dictionary
-print("\nChild")
+print("\nIf we want avoid change values of original dictionary")
+print("Child")
 a = {'a': 'A', 'c': 'C'}
 b = {'b': 'B', 'c': 'D'}
 
@@ -91,5 +91,3 @@ ab2 = ab1.new_child(c)
 
 print("ab1: {}".format(ab1))
 print("ab2: {}".format(ab2))
-
-
