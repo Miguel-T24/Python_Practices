@@ -20,6 +20,7 @@ print("keys: {}".format(list(ab.keys()))) # ['b','c','a']
 print("values: {}".format(list(ab.values()))) # ['B','C','A']
 
 print()
+print('a' in ab) # True
 print('d' in ab) # False
 
 # Sorting out
