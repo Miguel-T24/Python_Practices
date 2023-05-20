@@ -270,3 +270,10 @@ print()
 Compress()
 3 6 9 
 """
+
+
+print("\n8. Groupby:")
+L = [("a", 1), ("a", 2), ("b", 3), ("b", 4)]
+for key, group in itertools.groupby(L , lambda x:x[0]):
+    print("Key: {} , Group: {}".format(key,list(group)))
+    
