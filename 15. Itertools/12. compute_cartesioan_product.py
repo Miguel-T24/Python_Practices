@@ -1,0 +1,1 @@
+# 12. Write a python program to compute the cartesian product of two or more given list usgins itertools
