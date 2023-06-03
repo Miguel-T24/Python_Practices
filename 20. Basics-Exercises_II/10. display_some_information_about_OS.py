@@ -1,0 +1,25 @@
+# 10. Write a python proigram to display some information about the os where the scripting is running
+
+import platform as pl
+
+os_profile = [
+        'architecture',
+        'linux_distribution',
+        'mac_ver',
+        'machine',
+        'node',
+        'platform',
+        'processor',
+        'python_build',
+        'python_compiler',
+        'python_version',
+        'release',
+        'system',
+        'uname',
+        'version',
+    ]
+
+for key in os_profile:
+  if hasattr(pl, key):
+    print("{:<20} {}".format(key,str(getattr(pl, key)())))
+    # print(key +  ": " + str(getattr(pl, key)()))
